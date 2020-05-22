@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "267af08e-4745-4b3e-8945-91eddb3524d5",
+		"name": "TheCatAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ByOrigin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cat/search/findByOriginContains?origin=Egypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cat",
+						"search",
+						"findByOriginContains"
+					],
+					"query": [
+						{
+							"key": "origin",
+							"value": "Egypt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cat",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ByName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\": 10,\r\n        \"name\": \"American Bulldog\",\r\n        \"breed_group\": \"Working\",\r\n        \"life_span\": \"10 - 12 years\",\r\n        \"temperament\": \"Friendly, Assertive, Energetic, Loyal, Gentle, Confident, Dominant\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cat/search/findByName?name=American Curl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cat",
+						"search",
+						"findByName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "American Curl"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ByTemperament",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cat/search/findByTemperamentContains?temperament=Social",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cat",
+						"search",
+						"findByTemperamentContains"
+					],
+					"query": [
+						{
+							"key": "temperament",
+							"value": "Social"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
